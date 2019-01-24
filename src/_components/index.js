@@ -1,2 +1,2 @@
-export * from "./Index_component";
+export * from "./Home";
 export * from "./My404Component";

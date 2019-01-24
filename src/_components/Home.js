@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import logo from './../_images/logo.svg';
 import './../_styles/App.css';
+import '../_styles/Home.css';
 
-class IndexComponent extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="app-logo" alt="logo" />
           <p>
             پروژه آفتابگردون در همینجا شروع میشه 
           </p>
@@ -19,4 +20,4 @@ class IndexComponent extends Component {
     );
   }
 }
-export { IndexComponent };
+export { Home };

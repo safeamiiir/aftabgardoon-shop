@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
 import logo from './../_images/logo.svg';
-import './../_styles/App.css';
+import '../_styles/App.css';
+import '../_styles/Home.css';
+import { Grid } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 
+//############################################################################
+// styles
+//############################################################################
+const styles = theme => ({
+  numberSize: {
+    fontSize: "20vmin"
+  }
+});
 class My404Component extends Component {
   render() {
+    const {classes} = this.props;
     return (
-      <div className="App">
+      <Grid className="App">
         <header className="App-header">
-        <h2> 4 </h2>  
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2> 4 </h2>  
-        <p> Not </p> 
-        <p> Find </p> 
-        <p> ! </p> 
+        <Grid container className='flex'>
+        <span className={classes.numberSize}> 4 </span>
+        <img src={logo} className='app-logo' alt="logo" />
+        <span className={classes.numberSize}> 4 </span> 
+        <Grid container className={`flex + ${classes.numberSize}`}> Not Find ! </Grid> 
+        </Grid>
         </header>
-      </div>
+      </Grid>
     );
   }
 }
-export { My404Component };
+const My404ComponentWithStyle = withStyles(styles)(My404Component);
+export { My404ComponentWithStyle as My404Component };
